@@ -1,0 +1,65 @@
+# Listar todos os pratos
+GET http://localhost:3333/api/pratos
+Content-Type: application/json
+
+###
+
+# Criar um novo prato
+POST http://localhost:3333/api/pratos
+Content-Type: application/json
+
+{
+  "nome": "Pizza Margherita",
+  "descricao": "Pizza clássica italiana com tomate, mozzarella e manjericão.",
+  "preco": 25.90
+}
+
+###
+
+# Obter detalhes de um prato
+GET http://localhost:3333/api/pratos/1
+Content-Type: application/json
+
+###
+
+
+# Atualizar um prato
+PUT http://localhost:3333/api/pratos/1
+Content-Type: application/json
+
+{
+  "nome": "Pizza Margherita (Atualizada)",
+  "descricao": "Pizza clássica italiana com ingredientes frescos.",
+  "preco": 27.90
+}
+
+###
+
+# Excluir um prato
+DELETE http://localhost:3333/api/pratos/1
+Content-Type: application/json
+
+###
+
+# Criar um novo pedido
+POST http://localhost:3333/api/pedidos
+Content-Type: application/json
+
+{
+  "itens": [
+    { "pratoId": 2, "quantidade": 2 },
+    { "pratoId": 3, "quantidade": 1 }
+  ]
+}
+
+###
+
+# Listar todos os pedidos
+GET http://localhost:3333/api/pedidos
+Content-Type: application/json
+
+###
+
+# Obter detalhes de um pedido
+GET http://localhost:3333/api/pedidos/1
+Content-Type: application/json
